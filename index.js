@@ -8,7 +8,7 @@ const guid = require('./uid');
 require('electron-dl')();
 
 let mainWindow;
-const preloadScript = path.join(__dirname, '_preloadScript.js');
+const preloadScript = path.join(__dirname, '_preload-script.js');
 
 function onClosed() {
     mainWindow = null;
@@ -19,7 +19,7 @@ function createMainWindow() {
         width: 1240,
         height: 600,
         webPreferences: {
-            preload: preloadScript,
+            preload: preloadScript
         }
     });
 
@@ -34,24 +34,24 @@ function createMainWindow() {
             received: item.getReceivedBytes(),
             name: item.getFilename(),
             path: item.getSavePath(),
-            id: item.id,
+            id: item.id
         });
         item.on('updated', (event, state) => {
             if (browserWindow.isDestroyed()) {
                 return;
             }
             if (state === 'interrupted') {
-                // interrupted
+                // Interrupted
             } else if (state === 'progressing') {
                 if (item.isPaused()) {
-                    // handle pause
+                    // Handle pause
                 } else {
                     browserWindow.webContents.send('downloadInProgress', {
                         itemTotal: item.getTotalBytes(),
                         received: item.getReceivedBytes(),
                         name: item.getFilename(),
                         path: item.getSavePath(),
-                        id: item.id,
+                        id: item.id
                     });
                 }
             }
@@ -66,12 +66,12 @@ function createMainWindow() {
                     received: item.getReceivedBytes(),
                     name: item.getFilename(),
                     path: item.getSavePath(),
-                    id: item.id,
+                    id: item.id
                 });
             } else {
-                // handle
+                // Handle
             }
-        })
+        });
     });
 
     return win;

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "xo",
-    "browserify": "browserify -o _preloadScript.js -x electron --insert-global-vars=__filename,__dirname preloadScript.js",
+    "browserify": "browserify -o _preload-script.js -x electron --insert-global-vars=__filename,__dirname preload-script.js",
     "start": "npm run browserify && electron .",
     "build": "electron-packager . --out=dist --asar --overwrite --all"
   },

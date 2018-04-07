@@ -7,13 +7,13 @@ ipcRenderer.on('downloadInProgress', (event, args) => {
 });
 
 ipcRenderer.on('downloadCompleted', (event, args) => {
-    let completedItem = document.getElementById(`${args.id}`);
-    let bar = document.getElementById(`${args.id}-bar`);
-    let open = document.getElementById(`${args.id}-open`);
-    let close = document.getElementById(`${args.id}-close`);
-    let action = document.getElementById(`${args.id}-actions`);
-    let main = document.getElementById(`${args.id}-main`);
-    let per = document.getElementById(`${args.id}-per`);
+    const completedItem = document.getElementById(`${args.id}`);
+    const bar = document.getElementById(`${args.id}-bar`);
+    const open = document.getElementById(`${args.id}-open`);
+    const close = document.getElementById(`${args.id}-close`);
+    const action = document.getElementById(`${args.id}-actions`);
+    const main = document.getElementById(`${args.id}-main`);
+    const per = document.getElementById(`${args.id}-per`);
 
     if (action) {
         action.classList.remove('hidden');
@@ -29,17 +29,17 @@ ipcRenderer.on('downloadCompleted', (event, args) => {
 
     if (open) {
         open.addEventListener('click', () => {
-            let showResponse = remote.shell.showItemInFolder(args.path);
+            const showResponse = remote.shell.showItemInFolder(args.path);
             if (!showResponse) {
-                remote.dialog.showErrorBox("File not found", `File not found in path${args.path}`);
+                remote.dialog.showErrorBox('File not found', `File not found in path${args.path}`);
             }
-        })
+        });
     }
 
     if (close) {
         close.addEventListener('click', () => {
             main.remove();
-        })
+        });
     }
 
     if (bar) {
@@ -52,17 +52,17 @@ ipcRenderer.on('downloadStated', (event, args) => {
 });
 
 function progressHandler(e, args) {
-    let progressBar = document.getElementById(`${args.id}-progress`);
-    let per = document.getElementById(`${args.id}-per`);
+    const progressBar = document.getElementById(`${args.id}-progress`);
+    const per = document.getElementById(`${args.id}-per`);
     if (progressBar) {
         progressBar.max = args.itemTotal;
         progressBar.value = args.received;
-        per.innerText = Math.round((args.received / args.itemTotal) * 100) + "%"
+        per.innerText = Math.round((args.received / args.itemTotal) * 100) + '%';
     }
 }
 
 function createDownloadDOM(e, args) {
-    let mainDOM = document.getElementById('main');
+    const mainDOM = document.getElementById('main');
 
     if (mainDOM) {
         mainDOM.innerHTML += downloadItem(args);
