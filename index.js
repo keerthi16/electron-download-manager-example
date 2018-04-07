@@ -11,20 +11,20 @@ let mainWindow;
 const preloadScript = path.join(__dirname, '_preloadScript.js');
 
 function onClosed() {
-	mainWindow = null;
+    mainWindow = null;
 }
 
 function createMainWindow() {
-	const win = new electron.BrowserWindow({
-		width: 1240,
-		height: 600,
+    const win = new electron.BrowserWindow({
+        width: 1240,
+        height: 600,
         webPreferences: {
             preload: preloadScript,
         }
-	});
+    });
 
-	win.loadURL(`file://${__dirname}/index.html`);
-	win.on('closed', onClosed);
+    win.loadURL(`file://${__dirname}/index.html`);
+    win.on('closed', onClosed);
 
     win.webContents.session.on('will-download', (event, item, webContents) => {
         const browserWindow = electron.BrowserWindow.fromWebContents(webContents);
@@ -74,21 +74,21 @@ function createMainWindow() {
         })
     });
 
-	return win;
+    return win;
 }
 
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
 
 app.on('activate', () => {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
+    if (!mainWindow) {
+        mainWindow = createMainWindow();
+    }
 });
 
 app.on('ready', () => {
-	mainWindow = createMainWindow();
+    mainWindow = createMainWindow();
 });

@@ -26,4 +26,5 @@ function generateTemplete(args) {
             </div>
         </div>`);
 }
+
 module.exports = generateTemplete;

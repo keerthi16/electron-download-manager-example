@@ -57,7 +57,7 @@ function progressHandler(e, args) {
     if (progressBar) {
         progressBar.max = args.itemTotal;
         progressBar.value = args.received;
-        per.innerText = Math.round(( args.received / args.itemTotal ) * 100) + "%"
+        per.innerText = Math.round((args.received / args.itemTotal) * 100) + "%"
     }
 }
 
