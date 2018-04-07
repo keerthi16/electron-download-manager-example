@@ -1,0 +1,189 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.space {
+    margin-top: 30px;
+}
+
+body {
+    background: #2B2D3C url("https://openclipart.org/image/2400px/svg_to_png/261688/2016-09-15-01-14-24.png") no-repeat fixed left;
+    background-size: auto;
+    margin: 20px;
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 100;
+    align-items: center;
+    color: #486E7A;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.first-col {
+    float: left;
+    margin: 2px;
+    display: inline-block;
+}
+
+.first-col .download {
+    height: auto;
+    width: 100%;
+}
+
+.first-col .download .header .header-icon {
+    float: left;
+    width: 20%;
+    padding: 15px 0;
+    background-color: #446CB3;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.first-col .download .header .header-txt {
+    padding: 15px;
+    color: #fff;
+    width: 70%;
+    float: left;
+    font-size: 20px;
+}
+
+.first-col .download .download-first-row {
+    background-color: #446CB3;
+    padding-bottom: 10px;
+    height: auto;
+}
+
+.first-col .download .download-first-row .row-icon {
+    float: left;
+    width: 20%;
+    color: #fff;
+    font-size: 53px;
+    padding: 12px 0 0 19px;
+}
+
+.first-col .download .download-first-row .row-content {
+    float: left;
+    width: 70%;
+    height: auto;
+}
+
+.first-col .download .download-first-row .row-content .download-bar {
+    margin-top: 7px;
+}
+
+.first-col .download .download-first-row .row-content .download-bar .download-bar-header {
+    font-size: 10px;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.first-col .download .download-first-row .row-content .download-bar .download-bar-progress .progress-bar[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+}
+
+.first-col .download .download-first-row .row-content .download-bar .download-bar-progress .progress-bar[value]::-webkit-progress-bar {
+    background-color: #6fb6e7;
+}
+
+.first-col .download .download-first-row .row-content .download-bar .download-bar-progress .progress-bar[value]::-webkit-progress-value {
+    background-color: #fff;
+}
+
+.buttons {
+    display: flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1em 0;
+    padding: 1em 2em;
+    background: transparent;
+    border-radius: 3px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.blue {
+    padding: 0.30em;
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.box .blue {
+    box-shadow: -1px 0 0 1px rgba(61, 173, 233, 0.75), -1px -1px 0 1px rgba(94, 142, 226, 0.25), -1px 1px 0 1px rgba(94, 142, 226, 0.25), 0 -1px 0 1px rgba(126, 110, 218, 0.5), 0 1px 0 1px rgba(126, 110, 218, 0.5), 1px -1px 0 1px rgba(159, 79, 211, 0.25), 1px 1px 0 1px rgba(159, 79, 211, 0.25), 1px 0 0 1px rgba(191, 47, 203, 0.75);
+}
+
+.border .blue {
+    border-left: 2px solid #3dade9;
+    border-right: 2px solid #bf2fcb;
+    background-image: linear-gradient(left, #3dade9, #bf2fcb), linear-gradient(left, #3dade9, #bf2fcb);
+    background-size: 100% 2px;
+    background-position: 0 100%, 0 0;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blue span {
+    background: -webkit-linear-gradient(left, #3dade9, #bf2fcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.first-col .download .download-first-row .row-content .download-bar .dowload-bar-footer {
+    color: #fff;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+progress {
+    width: 100%;
+}
+
+.fa-pause-circle-o {
+    color: white;
+    margin-right: 2px;
+}
+
+.fa-folder {
+    color: white;
+    margin-right: 2px;
+}
+
+.fa-times-circle-o {
+    color: white;
+    margin-right: 2px;
+}
+
+.p-5 {
+    margin-top: 6px;
+}
+
+.hidden {
+    display: none;
+}

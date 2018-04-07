@@ -1,0 +1,34 @@
+{
+  "name": "electron-download-manager",
+  "productName": "electron-download-manager",
+  "version": "1.0.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "repository": "",
+  "author": {
+    "name": "Keerthi Niranjan",
+    "email": "keerthiniranjan16@gmail.com",
+    "url": ""
+  },
+  "scripts": {
+    "test": "xo",
+    "browserify": "browserify -o _preloadScript.js -x electron --insert-global-vars=__filename,__dirname preloadScript.js",
+    "start": "npm run browserify && electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "devDependencies": {
+    "browserify": "^16.1.1",
+    "electron": "^1.6.6",
+    "electron-packager": "^8.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ]
+  },
+  "dependencies": {
+    "electron-dl": "^1.11.0"
+  }
+}
