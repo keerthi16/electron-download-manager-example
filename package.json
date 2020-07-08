@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "browserify": "^16.1.1",
-    "electron": "^1.6.6",
+    "electron": "^9.1.0",
     "electron-packager": "^8.0.0",
     "xo": "^0.18.0"
   },
